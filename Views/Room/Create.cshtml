@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .contain {
+            margin: 20px;
+        }
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .col-25 {
+            flex: 1;
+            padding-right: 15px;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .col-75 {
+            flex: 3;
+        }
+
+        input[type="text"], input[type="checkbox"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="checkbox"] {
+            width: auto;
+            transform: scale(1.5);
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+            input[type="submit"]:hover {
+                background-color: #45a049;
+            }
+
+        label {
+            display: block;
+        }
+
+        .header {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* Mobile responsive */
+        media (max-width: 600px) {
+            .row
+
+        {
+            flex-direction: column;
+        }
+
+        .col-25 {
+            padding-right: 0;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            font-size: 18px;
+        }
+
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contain">
+        <div class="header">Room Registration Form</div>
+        <form action="Create" method="post">
+            <div class="row">
+                <div class="col-25">
+                    <label for="fname">Name</label>
+                </div>
+                <div class="col-75">
+                    <input type="text" id="RoomName" name="RoomName" placeholder="Your name..">
+                </div>
+            </div>
+            
+
+
+            <div class="row">
+                <div class="col-25">
+                    <label for="lname">Is Active</label>
+                </div>
+                <div class="col-75">
+                    <input type="checkbox" id="RoomStatus" name="RoomStatus">
+                </div>
+            </div>
+            <div class="row">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
